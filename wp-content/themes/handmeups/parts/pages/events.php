@@ -1,0 +1,1 @@
+<a href="?page=explores">Explores</a>

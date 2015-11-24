@@ -1,0 +1,9 @@
+#header--nav,
+#headernav_social {
+  padding: 0;
+  margin: 0;
+}
+#header--nav li,
+#headernav_social li {
+  display: inline-block;
+}
