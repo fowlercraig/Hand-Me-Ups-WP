@@ -1,1 +1,0 @@
-<?php include ('parts/boilerplate.php'); ?>
