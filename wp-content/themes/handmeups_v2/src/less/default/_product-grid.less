@@ -1,0 +1,37 @@
+@spacing: @spaced;
+
+#wrapper {
+   overflow: hidden;
+}
+
+#product-grid {
+   
+   &.spaced {
+      margin: 0 -@spacing;   
+   }
+
+}
+
+.product--grid {
+
+   &-thumb {
+      margin-bottom: @spaced/2;
+   }
+
+   &-title {
+      margin: 0;
+   }
+
+   &-cell {
+      //display: inline-block;
+   }
+
+   &-wrapper {
+      padding: 0 @spacing @spaced*3;
+   }
+
+   &-medium {
+      //padding: @spacing @spacing*1.25 @spaced*3;
+   }
+
+}
