@@ -3,7 +3,9 @@
 
 <footer id="footer">
 <div class="fs-row">
-<div class='fs-cell fs-lg-11 fs-md-6 fs-sm-3'>Footer Content</div>
+<div class='fs-cell fs-lg-11 fs-md-6 fs-sm-3'>
+<?php the_field('footer',3); ?>
+</div>
 </div>
 </footer>
 

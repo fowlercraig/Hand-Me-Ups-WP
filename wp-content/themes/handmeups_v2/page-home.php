@@ -38,12 +38,21 @@
 	$textColor  = get_field('text_color');
 	$pageType   = get_field('page_type');
 	$sectionImg = get_field('background_image');
+  $slug       = $post->post_name;
+  if ($sectionImg){
+    $sectionImgclass = 'wallpaper';
+  }
+  if ($slug == 'get-in-touch'){
+    $height = 'banner-large ';
+  } else {
+    $height = 'banner-medium ';
+  }
 ?>
 
-<div id="<?php echo $post->post_name;?>" <?php post_class('section banner banner-medium centered-parent wallpaper'); ?> style="background-color: <?php echo $slideColor; ?>; color: <?php echo $textColor; ?>" <?php if($sectionImg): ?>data-background-options='{"source":"<?php echo $sectionImg; ?>"}'<?php endif; ?>>
+<div id="<?php echo $post->post_name;?>" <?php post_class('section banner banner-medium centered-parent ' . "$height", "$sectionImgclass" ); ?> style="background-color: <?php echo $slideColor; ?>; color: <?php echo $textColor; ?>" <?php if($sectionImg): ?>data-background-options='{"source":"<?php echo $sectionImg; ?>"}'<?php endif; ?>>
 	<div class="section__centered centered centered-full">
 		<div class="fs-row">
-			<div class="fs-cell fs-all-full">
+			<div class="fs-cell fs-lg-9 fs-md-5 fs-sm-3 fs-centered">
 				<header class="text-center"><h2><?php the_title(); ?></h2></header>
 				<div class="text-center">
 					<span class="ss-gizmo ss-down"></span>
@@ -57,15 +66,19 @@
 <?php if ($images): ?>
 
 	<div class="section__covered covered">
-		<div class="carousel">
+		<div class="carousel carousel_fade" data-carousel-options='{"single":true}'>
 
 <?php foreach( $images as $image ): ?>
 
 			<div class="carousel__slide banner-medium wallpaper" data-background-options='{"source":"<?php echo $image['url']; ?>"}'>
 				<div class="carousel__slide--centered centered centered-full">
 					<div class="fs-row">
-						<div class="fs-cell fs-all-full">
-							Hello
+						<div class="fs-cell fs-lg-9 fs-md-5 fs-sm-3 fs-centered">
+							<header class="text-center"><h2 class="color-white"><?php the_title(); ?></h2></header>
+              <div class="text-center">
+                <span class="ss-gizmo ss-down"></span>
+                <p><?php echo $image['caption']; ?></p>
+              </div>
 						</div>
 					</div>
 				</div>

@@ -1,0 +1,56 @@
+#gform_1 {
+  .gform {
+    &_footer {
+      padding: 0;
+      margin-top: 10px;
+      text-align: center;
+      .button {
+        max-width: 200px;
+        margin: auto;
+        float: none;
+        display: inline-block;
+        color: @white;
+        background: @lighterGray;
+        border-radius: 0;
+        &:hover {
+          background: darken(@lighterGray, 5%);
+        }
+      }
+    }
+    &_button.button {
+      background: @orange;
+      &:hover {
+        background: darken(@orange, 10%);
+      }
+    }
+  }
+  label {
+    display: none;
+  }
+  ul {
+    padding-left: 10px;
+  }
+  li {
+    margin-bottom: 0;
+    &:before {
+      display: none;
+    }
+  }
+  .ginput_container {
+    input {
+      background: @bgGray;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 15px;
+      padding: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      .font_size(12);
+      color: @black;
+      &::placeholder {
+        color: fade(@black, 80%);
+      }
+    }
+  }
+}
